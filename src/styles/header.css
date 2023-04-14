@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  box-sizing: border-box;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7efe9;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(80px, 100%, 450px);
+  text-align: center;
+}
+.tabs a {
+  flex-grow: 1;
+}
+
+.logo {
+  font-size: 24px;
+  padding-left: clamp(10px, calc(5vw + 10px), 100px);
+}
