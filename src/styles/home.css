@@ -1,0 +1,30 @@
+body {
+  background-image: url("../assets/imgs/pasta.png");
+  background-size: cover;
+  background-position: 50% 75%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin: 150px 20px 0px 20px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 60px;
+}
+
+.heading {
+  font-size: 100px;
+  color: white;
+  width: clamp(300px, 100%, 1000px);
+  text-align: center;
+}
+
+.reservation {
+  background-color: #e7643b;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 12px;
+}
