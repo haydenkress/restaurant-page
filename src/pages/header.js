@@ -24,9 +24,9 @@ function createHeader() {
     tabs.append(item);
   });
 
-  content.append(header);
   header.append(logo);
   header.append(tabs);
+  content.append(header);
 }
 
 export { createHeader };
