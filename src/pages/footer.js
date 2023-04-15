@@ -1,6 +1,6 @@
 import "../styles/footer.css";
 
-function createFooter() {
+const createFooter = () => {
   const footer = document.createElement("footer");
   const copyright = document.createElement("span");
   const name = document.createElement("a");
@@ -10,6 +10,6 @@ function createFooter() {
   footer.append(copyright);
   footer.append(name);
   content.append(footer);
-}
+};
 
 export { createFooter };

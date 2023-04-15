@@ -6,7 +6,7 @@ import WoodOvenPizza from "../assets/imgs/woodoven-pizza.jpg";
 
 const menu = document.createElement("div");
 
-function createMenu() {
+const createMenu = () => {
   const content = document.querySelector("#content");
   menu.classList.add("menu");
   content.append(menu);
@@ -30,7 +30,7 @@ function createMenu() {
     Breadsticks,
     "Made with the finest ingredients, our breadsticks are baked to perfection, resulting in a crispy and golden exterior with a warm, fluffy interior. "
   );
-}
+};
 
 function addMenuItem(title, image, description) {
   const item = title.toLowerCase().replace(/\s+/g, "-");

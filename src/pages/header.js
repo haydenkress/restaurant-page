@@ -1,6 +1,6 @@
 import "../styles/header.css";
 
-function createHeader() {
+const createHeader = () => {
   const header = document.createElement("div");
   header.classList.add("header");
   const content = document.querySelector("#content");
@@ -27,6 +27,6 @@ function createHeader() {
   header.append(logo);
   header.append(tabs);
   content.append(header);
-}
+};
 
 export { createHeader };

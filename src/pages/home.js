@@ -1,6 +1,6 @@
 import "../styles/home.css";
 
-function createHome() {
+const createHome = () => {
   const content = document.querySelector("#content");
   const hero = document.createElement("div");
   hero.classList.add("hero");
@@ -14,6 +14,6 @@ function createHome() {
   reservationBtn.classList.add("reservation");
   reservationBtn.textContent = "Book a Reservation";
   hero.append(reservationBtn);
-}
+};
 
 export { createHome };
