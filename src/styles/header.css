@@ -1,15 +1,26 @@
 * {
   box-sizing: border-box;
 }
-a,
-button {
-  cursor: pointer;
-}
+
 body {
   margin: 0;
   padding: 0;
   width: 100vw;
   min-height: 100vh;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.tabs a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+}
+
+#main {
+  flex: 1;
 }
 
 #content {
@@ -30,8 +41,9 @@ body {
 .tabs {
   display: flex;
   justify-content: space-between;
-  width: clamp(80px, 100%, 450px);
   text-align: center;
+  gap: clamp(20px, 5vw, 60px);
+  margin-right: 100px;
 }
 .tabs a {
   flex-grow: 1;

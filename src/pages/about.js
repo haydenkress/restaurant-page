@@ -2,14 +2,17 @@ import ChefOne from "../assets/imgs/chef1.jpeg";
 import ChefTwo from "../assets/imgs/chef2.jpeg";
 import "../styles/about.css";
 
-const aboutSection = document.createElement("div");
+let aboutSection;
 
 const createAbout = () => {
+  aboutSection = document.createElement("div");
   const content = document.querySelector("#content");
+
   aboutSection.classList.add("about-section");
   content.append(aboutSection);
   addPeople("Louis Nevada", ChefOne, "Head Chef");
   addPeople("Gene Morrison", ChefTwo, "Chief of Culinary Experiences");
+  return aboutSection;
 };
 
 function addPeople(name, image, position) {
@@ -40,4 +43,10 @@ function addPeople(name, image, position) {
   aboutSection.append(itemElement);
 }
 
-export { createAbout, aboutSection };
+function loadAbout() {
+  const main = document.getElementById("main");
+  main.textContent = "";
+  main.appendChild(createAbout());
+}
+
+export { loadAbout };

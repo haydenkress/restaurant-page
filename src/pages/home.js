@@ -1,13 +1,13 @@
 import "../styles/home.css";
 
-const homeSection = document.createElement("div");
-const reservationBtn = document.createElement("button");
-
 const createHome = () => {
+  const reservationBtn = document.createElement("button");
+  const homeSection = document.createElement("div");
+  const heading = document.createElement("div");
   const content = document.querySelector("#content");
 
   homeSection.classList.add("home-section");
-  const heading = document.createElement("div");
+
   heading.classList.add("heading");
   heading.textContent = "Bring Italy to Your Table";
   homeSection.append(heading);
@@ -16,6 +16,7 @@ const createHome = () => {
   reservationBtn.classList.add("reservation");
   reservationBtn.textContent = "Book a Reservation";
   homeSection.append(reservationBtn);
+  return homeSection;
 };
 
 function loadHome() {
@@ -24,4 +25,4 @@ function loadHome() {
   main.appendChild(createHome());
 }
 
-export { createHome, homeSection, reservationBtn };
+export { loadHome };

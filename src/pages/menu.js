@@ -4,10 +4,12 @@ import Amatriciana from "../assets/imgs/amatriciana.jpg";
 import Breadsticks from "../assets/imgs/breadsticks.jpeg";
 import WoodOvenPizza from "../assets/imgs/woodoven-pizza.jpg";
 
-const menuSection = document.createElement("div");
+let menuSection;
 
 const createMenu = () => {
+  menuSection = document.createElement("div");
   const content = document.querySelector("#content");
+
   menuSection.classList.add("menu");
   content.append(menuSection);
   addMenuItem(
@@ -30,6 +32,7 @@ const createMenu = () => {
     Breadsticks,
     "Made with the finest ingredients, our breadsticks are baked to perfection, resulting in a crispy and golden exterior with a warm, fluffy interior. "
   );
+  return menuSection;
 };
 
 function addMenuItem(title, image, description) {
@@ -60,4 +63,10 @@ function addMenuItem(title, image, description) {
   menuSection.append(itemElement);
 }
 
-export { createMenu, menuSection };
+function loadMenu() {
+  const main = document.getElementById("main");
+  main.textContent = "";
+  main.appendChild(createMenu());
+}
+
+export { loadMenu };
