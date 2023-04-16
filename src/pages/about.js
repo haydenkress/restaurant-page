@@ -1,5 +1,5 @@
 import ChefOne from "../assets/imgs/chef1.jpeg";
-import ChefTwo from "../assets/imgs/chef2.jpeg";
+import ChefTwo from "../assets/imgs/chef2.jpg";
 import "../styles/about.css";
 
 let aboutSection;
