@@ -1,19 +1,27 @@
 import "../styles/home.css";
 
+const homeSection = document.createElement("div");
+const reservationBtn = document.createElement("button");
+
 const createHome = () => {
   const content = document.querySelector("#content");
-  const hero = document.createElement("div");
-  hero.classList.add("hero");
+
+  homeSection.classList.add("home-section");
   const heading = document.createElement("div");
   heading.classList.add("heading");
   heading.textContent = "Bring Italy to Your Table";
-  hero.append(heading);
-  content.append(hero);
+  homeSection.append(heading);
+  content.append(homeSection);
 
-  const reservationBtn = document.createElement("button");
   reservationBtn.classList.add("reservation");
   reservationBtn.textContent = "Book a Reservation";
-  hero.append(reservationBtn);
+  homeSection.append(reservationBtn);
 };
 
-export { createHome };
+function loadHome() {
+  const main = document.getElementById("main");
+  main.textContent = "";
+  main.appendChild(createHome());
+}
+
+export { createHome, homeSection, reservationBtn };

@@ -4,7 +4,7 @@ body {
   background-position: 50% 75%;
 }
 
-.hero {
+.home-section {
   display: flex;
   flex-direction: column;
   margin: 150px 20px 0px 20px;

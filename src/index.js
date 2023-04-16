@@ -1,9 +1,19 @@
 import { createHeader } from "./pages/header";
-import { createHome } from "./pages/home";
-import { createMenu } from "./pages/menu";
-import { createAbout } from "./pages/about";
+import { createHome, homeSection, reservationBtn } from "./pages/home";
+import { createMenu, menuSection } from "./pages/menu";
+import { createAbout, aboutSection } from "./pages/about";
 import { createFooter } from "./pages/footer";
 
-createHeader();
-createAbout();
-createFooter();
+function firstLoad() {
+  createHeader();
+  createHome();
+  createFooter();
+}
+firstLoad();
+
+const home = document.querySelector(".home-btn");
+const menu = document.querySelector(".menu-btn");
+const about = document.querySelector(".about-btn");
+
+const content = document.querySelector("#content");
+const secondChild = content.children[1];

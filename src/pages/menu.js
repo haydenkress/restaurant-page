@@ -4,12 +4,12 @@ import Amatriciana from "../assets/imgs/amatriciana.jpg";
 import Breadsticks from "../assets/imgs/breadsticks.jpeg";
 import WoodOvenPizza from "../assets/imgs/woodoven-pizza.jpg";
 
-const menu = document.createElement("div");
+const menuSection = document.createElement("div");
 
 const createMenu = () => {
   const content = document.querySelector("#content");
-  menu.classList.add("menu");
-  content.append(menu);
+  menuSection.classList.add("menu");
+  content.append(menuSection);
   addMenuItem(
     "Penne Arrabiata",
     Penne,
@@ -57,7 +57,7 @@ function addMenuItem(title, image, description) {
   itemElement.append(text);
 
   itemElements[item] = itemElement;
-  menu.append(itemElement);
+  menuSection.append(itemElement);
 }
 
-export { createMenu };
+export { createMenu, menuSection };

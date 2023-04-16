@@ -13,10 +13,13 @@ const createHeader = () => {
   tabs.classList.add("tabs");
 
   const home = document.createElement("a");
+  home.classList.add("home-btn");
   home.textContent = "Home";
   const menu = document.createElement("a");
+  menu.classList.add("menu-btn");
   menu.textContent = "Menu";
   const about = document.createElement("a");
+  about.classList.add("about-btn");
   about.textContent = "About";
   const items = [home, menu, about];
 

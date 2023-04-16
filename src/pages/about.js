@@ -40,4 +40,4 @@ function addPeople(name, image, position) {
   aboutSection.append(itemElement);
 }
 
-export { createAbout };
+export { createAbout, aboutSection };
